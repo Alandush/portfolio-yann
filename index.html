@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yann Auliac - Portfolio</title>
+
+<!-- Polices : Pastrami (titres) + Hanken Grotesk (texte) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav>
+  <div class="logo">Yann Auliac</div>
+  <div class="links">
+    <a href="#hero">Accueil</a>
+    <a href="#showreel">Démoreel</a>
+    <a href="#projets">Projets</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ============ SECTION 1 — HERO 3D ============ -->
+<header id="hero">
+  <canvas id="three-canvas"></canvas>
+  <div class="hero-inner">
+    <h1 class="display">
+      <span class="line"><span>Animateur</span></span>
+      <span class="line"><span>&amp; Artiste 3D</span></span>
+    </h1>
+    <div class="meta">
+      <div>
+        <div class="eyebrow">Présentation</div>
+        <p>Animateur 3D polyvalent, maîtrisant les fondamentaux de la modélisation, de l'animation et du rendu sur des logiciels tels que Blender et Maya.</p>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Défiler</span>
+    <span class="bar"></span>
+  </div>
+</header>
+
+<!-- ============ BANDEAU DÉFILANT ============ -->
+<div class="marquee">
+  <div class="track">
+    <span>Modélisation</span><span class="dim">Rendu</span>
+    <span>Animation</span><span class="dim">Layout 3D</span>
+    <span>Direction artistique</span><span class="dim">Storyboard</span>
+    <span>Modélisation</span><span class="dim">Rendu</span>
+    <span>Animation</span><span class="dim">Layout 3D</span>
+    <span>Direction artistique</span><span class="dim">Storyboard</span>
+  </div>
+</div>
+
+<!-- ============ SECTION 2 — DÉMOREEL ============ -->
+<section id="showreel">
+  <div class="sec-head reveal">
+    <div>
+      <div class="num">01 — Démoreel</div>
+      <h2 class="display">Le reel</h2>
+    </div>
+    <p>Une sélection condensée des meilleurs plans, toutes productions confondues. Le résumé d'une année de travail.</p>
+  </div>
+
+  <div class="reel reveal" id="reelPlayer">
+    <video src="videos/demoreel.mp4" preload="metadata"></video>
+
+    <!-- overlay central play/pause -->
+    <div class="v-overlay" id="reelOverlay">
+      <div class="v-big-play" id="reelBigPlay">
+        <svg class="ico-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+
+    <!-- barre de contrôles -->
+    <div class="v-controls">
+      <button class="v-btn" id="reelPlayBtn" aria-label="Lecture / Pause">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <div class="v-progress" id="reelProgress">
+        <div class="v-progress-fill" id="reelFill"></div>
+      </div>
+      <span class="v-time" id="reelTime">0:00 / 0:00</span>
+      <button class="v-btn" id="reelVol" aria-label="Volume">
+        <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      </button>
+      <button class="v-btn" id="reelFs" aria-label="Plein écran">
+        <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 3 — PROJETS / ARTICLES ============ -->
+<section id="projets">
+  <div class="sec-head reveal">
+    <div>
+      <div class="num">02 — Projets</div>
+      <h2 class="display">Le travail</h2>
+    </div>
+    <p>Chaque projet est présenté en détail : vidéo principale, intention et planches techniques.</p>
+  </div>
+
+  <!-- ----- ARTICLE 1 ----- -->
+  <article class="article reveal">
+    <div class="art-head">
+      <span class="art-index">(01)</span>
+      <h3>Court-métrage : Songe</h3>
+      <span class="tag">Projet scolaire</span>
+    </div>
+
+    <div class="art-video">
+      <video src="videos/projet-1.mp4" poster="..." controls></video>
+    </div>
+
+    <div class="art-body">
+      <div class="art-desc">
+        <div class="eyebrow">À propos</div>
+        <p>Songe est le projet final de mon cursus scolaire au Québec. J'ai participé au développement du projet au niveau des layouts et des animations de personnages.</p>
+        <p>Les autres éléments ont été produits par les autres membres de ma classe.</p>
+        <ul>
+          <li><span>Rôle</span><span>Animation 3D</span></li>
+          <li><span>Logiciels</span><span>Maya</span></li>
+          <li><span>Année</span><span>2023</span></li>
+        </ul>
+      </div>
+      <div class="art-grid">
+        <div class="cell"><div class="ph">Modélisation</div></div>
+        <div class="cell"><div class="ph">Simulation fluides</div></div>
+        <div class="cell"><div class="ph">Compositing final</div></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ----- ARTICLE 2 ----- -->
+  <article class="article reveal">
+    <div class="art-head">
+      <span class="art-index">(02)</span>
+      <h3>Court-métrage : Fracture</h3>
+      <span class="tag">Projet personnel</span>
+    </div>
+
+    <div class="art-video">
+      <video src="videos/projet-1.mp4" poster="..." controls></video>
+    </div>
+
+    <div class="art-body">
+      <div class="art-desc">
+        <div class="eyebrow">À propos</div>
+        <p>J'ai conçu de toutes pièces le court métrage 3D, <strong>Fracture</strong>, dans le cadre d'une formation en France. </p>
+        <p>J'ai également réalisé un dossier de projet recessant toutes les étapes de la production du projet depuis sa conception.</p>
+        <ul>
+          <li><span>Rôle</span><span>Modélisation · Animation · Rendu</span></li>
+          <li><span>Logiciels</span><span>Blender · Octane</span></li>
+          <li><span>Année</span><span>2025</span></li>
+        </ul>
+      </div>
+      <div class="art-grid art-grid-six">
+        <div class="cell"><div class="ph">Hard-surface</div></div>
+        <div class="cell"><div class="ph">Vue éclatée</div></div>
+        <div class="cell"><div class="ph">Matériaux</div></div>
+        <div class="cell"><div class="ph">Rendu produit</div></div>
+        <div class="cell"><div class="ph">Détails</div></div>
+        <div class="cell"><div class="ph">Lighting</div></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ----- ARTICLE 3 ----- -->
+  <article class="article reveal">
+    <div class="art-head">
+      <span class="art-index">(03)</span>
+      <h3>Monologue</h3>
+      <span class="tag">2 secondes</span>
+    </div>
+
+    <div class="art-video">
+      <video src="videos/projet-1.mp4" poster="..." controls></video>
+    </div>
+
+    <div class="art-body">
+      <div class="art-desc">
+        <div class="eyebrow">À propos</div>
+        <p>Un univers naturel généré procéduralement : croissance végétale, vent et lumière du soleil rasante.</p>
+        <p>Le défi technique a été d'animer des milliers d'instances tout en gardant un rendu maîtrisé.</p>
+        <ul>
+          <li><span>Rôle</span><span>Animation · FX</span></li>
+          <li><span>Logiciels</span><span>Houdini · Redshift</span></li>
+          <li><span>Année</span><span>2025</span></li>
+        </ul>
+      </div>
+      <div class="art-grid art-grid-two">
+        <div class="cell"><div class="ph">Procédural</div></div>
+        <div class="cell"><div class="ph">Plan final</div></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ============ FOOTER / CONTACT ============ -->
+<footer id="contact">
+  <div class="ft-big reveal">
+    Travaillons<br>
+    <a href="mailto:hello@studio3d.com">ensemble&nbsp;↗</a>
+  </div>
+  <div class="ft-row">
+    <span>© 2026 Studio 3D — Animateur 3D</span>
+    <div class="social">
+      <a href="#">Instagram</a>
+      <a href="#">Behance</a>
+      <a href="#">Vimeo</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ THREE.JS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
