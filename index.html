@@ -68,29 +68,26 @@
     <p>Une sélection condensée des meilleurs plans, toutes productions confondues. Le résumé d'une année de travail.</p>
   </div>
 
-  <div class="reel reveal" id="reelPlayer">
-    <video src="videos/demoreel.mp4" preload="metadata"></video>
+  <div class="reel reveal yt-player">
+    <iframe src="https://www.youtube.com/embed/MlLoVvVVjU4?enablejsapi=1&controls=0&rel=0&modestbranding=1&playsinline=1"
+      frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
 
-    <!-- overlay central play/pause -->
-    <div class="v-overlay" id="reelOverlay">
-      <div class="v-big-play" id="reelBigPlay">
+    <div class="v-overlay">
+      <div class="v-big-play">
         <svg class="ico-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
       </div>
     </div>
 
-    <!-- barre de contrôles -->
     <div class="v-controls">
-      <button class="v-btn" id="reelPlayBtn" aria-label="Lecture / Pause">
+      <button class="v-btn v-play-btn" aria-label="Lecture / Pause">
         <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
       </button>
-      <div class="v-progress" id="reelProgress">
-        <div class="v-progress-fill" id="reelFill"></div>
-      </div>
-      <span class="v-time" id="reelTime">0:00 / 0:00</span>
-      <button class="v-btn" id="reelVol" aria-label="Volume">
+      <div class="v-progress"><div class="v-progress-fill"></div></div>
+      <span class="v-time">0:00 / 0:00</span>
+      <button class="v-btn v-vol-btn" aria-label="Volume">
         <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
       </button>
-      <button class="v-btn" id="reelFs" aria-label="Plein écran">
+      <button class="v-btn v-fs-btn" aria-label="Plein écran">
         <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
       </button>
     </div>
@@ -115,8 +112,21 @@
       <span class="tag">Projet scolaire</span>
     </div>
 
-    <div class="art-video">
-      <video src="videos/edit_songe_v023.mov" poster="..." controls></video>
+    <div class="art-video yt-player">
+      <iframe src="https://www.youtube.com/embed/ID_YOUTUBE_1?enablejsapi=1&controls=0&rel=0&modestbranding=1&playsinline=1"
+        frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+      <div class="v-overlay">
+        <div class="v-big-play">
+          <svg class="ico-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+      <div class="v-controls">
+        <button class="v-btn v-play-btn" aria-label="Lecture / Pause"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+        <div class="v-progress"><div class="v-progress-fill"></div></div>
+        <span class="v-time">0:00 / 0:00</span>
+        <button class="v-btn v-vol-btn" aria-label="Volume"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+        <button class="v-btn v-fs-btn" aria-label="Plein écran"><svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg></button>
+      </div>
     </div>
 
     <div class="art-body">
@@ -131,9 +141,18 @@
         </ul>
       </div>
       <div class="art-grid">
-        <div class="cell"><div class="ph">Modélisation</div></div>
-        <div class="cell"><div class="ph">Simulation fluides</div></div>
-        <div class="cell"><div class="ph">Compositing final</div></div>
+        <div class="cell">
+          <img src="https://placehold.co/800x380/5B8A78/FEF9F5?text=+" alt="Modélisation">
+          <div class="ph">Modélisation</div>
+        </div>
+        <div class="cell">
+          <img src="https://placehold.co/800x380/3d3d42/FEF9F5?text=+" alt="Simulation fluides">
+          <div class="ph">Simulation fluides</div>
+        </div>
+        <div class="cell">
+          <img src="https://placehold.co/400x800/C8A85C/333336?text=+" alt="Compositing final">
+          <div class="ph">Compositing final</div>
+        </div>
       </div>
     </div>
   </article>
@@ -146,8 +165,21 @@
       <span class="tag">Projet personnel</span>
     </div>
 
-    <div class="art-video">
-      <video src="videos/Court_Metrage_Fracture_Animatique_3d.mp4" poster="..." controls></video>
+    <div class="art-video yt-player">
+      <iframe src="https://www.youtube.com/embed/ID_YOUTUBE_2?enablejsapi=1&controls=0&rel=0&modestbranding=1&playsinline=1"
+        frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+      <div class="v-overlay">
+        <div class="v-big-play">
+          <svg class="ico-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+      <div class="v-controls">
+        <button class="v-btn v-play-btn" aria-label="Lecture / Pause"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+        <div class="v-progress"><div class="v-progress-fill"></div></div>
+        <span class="v-time">0:00 / 0:00</span>
+        <button class="v-btn v-vol-btn" aria-label="Volume"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+        <button class="v-btn v-fs-btn" aria-label="Plein écran"><svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg></button>
+      </div>
     </div>
 
     <div class="art-body">
@@ -162,12 +194,30 @@
         </ul>
       </div>
       <div class="art-grid art-grid-six">
-        <div class="cell"><div class="ph">StoryBoard</div></div>
-        <div class="cell"><div class="ph">Environnement</div></div>
-        <div class="cell"><div class="ph">Matériaux</div></div>
-        <div class="cell"><div class="ph">Concept Art</div></div>
-        <div class="cell"><div class="ph">Modèles</div></div>
-        <div class="cell"><div class="ph">Lighting</div></div>
+        <div class="cell">
+          <img src="https://placehold.co/400x400/5B8A78/FEF9F5?text=+" alt="StoryBoard">
+          <div class="ph">StoryBoard</div>
+        </div>
+        <div class="cell">
+          <img src="https://placehold.co/400x400/3d3d42/FEF9F5?text=+" alt="Environnement">
+          <div class="ph">Environnement</div>
+        </div>
+        <div class="cell">
+          <img src="https://placehold.co/400x400/C8A85C/333336?text=+" alt="Matériaux">
+          <div class="ph">Matériaux</div>
+        </div>
+        <div class="cell">
+          <img src="https://placehold.co/400x400/333336/FEF9F5?text=+" alt="Concept Art">
+          <div class="ph">Concept Art</div>
+        </div>
+        <div class="cell">
+          <img src="https://placehold.co/400x400/a5cfc3/FEF9F5?text=+" alt="Modèles">
+          <div class="ph">Modèles</div>
+        </div>
+        <div class="cell">
+          <img src="https://placehold.co/400x400/3d3d42/FEF9F5?text=+" alt="Lighting">
+          <div class="ph">Lighting</div>
+        </div>
       </div>
     </div>
   </article>
@@ -180,8 +230,21 @@
       <span class="tag">Projet personnel</span>
     </div>
 
-    <div class="art-video">
-      <video src="videos/A Toy and a Dog.mp4" controls></video>
+    <div class="art-video yt-player">
+      <iframe src="https://www.youtube.com/embed/ID_YOUTUBE_3?enablejsapi=1&controls=0&rel=0&modestbranding=1&playsinline=1"
+        frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+      <div class="v-overlay">
+        <div class="v-big-play">
+          <svg class="ico-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+      <div class="v-controls">
+        <button class="v-btn v-play-btn" aria-label="Lecture / Pause"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+        <div class="v-progress"><div class="v-progress-fill"></div></div>
+        <span class="v-time">0:00 / 0:00</span>
+        <button class="v-btn v-vol-btn" aria-label="Volume"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+        <button class="v-btn v-fs-btn" aria-label="Plein écran"><svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg></button>
+      </div>
     </div>
 
     <div class="art-body">
@@ -196,8 +259,14 @@
         </ul>
       </div>
       <div class="art-grid art-grid-two">
-        <div class="cell"><div class="ph">Model</div></div>
-        <div class="cell"><div class="ph">Plan final</div></div>
+        <div class="cell">
+          <img src="https://placehold.co/400x400/5B8A78/FEF9F5?text=+" alt="Model">
+          <div class="ph">Model</div>
+        </div>
+        <div class="cell">
+          <img src="https://placehold.co/400x400/C8A85C/333336?text=+" alt="Plan final">
+          <div class="ph">Plan final</div>
+        </div>
       </div>
     </div>
   </article>
