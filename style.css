@@ -374,10 +374,8 @@ nav .links a:hover::after{width:100%;}
 .art-video iframe{
   position:absolute;inset:0;
   width:100%;height:100%;
-  border:0;pointer-events:none;
+  border:0;
 }
-.art-video:hover .v-overlay.playing{opacity:1;pointer-events:auto;}
-.art-video:hover .v-controls{opacity:1;pointer-events:auto;}
 
 /* corps de l'article : description + grille */
 .art-body{
@@ -453,6 +451,45 @@ nav .links a:hover::after{width:100%;}
 .art-grid-two .cell:nth-child(2){aspect-ratio:1;grid-column:auto;grid-row:auto;}
 .art-grid-two .cell:nth-child(2){background:linear-gradient(135deg,#ddc87c,#C8A85C);}
 .art-grid-two .cell:nth-child(2) .ph{color:rgba(254,249,245,.75);}
+
+/* ---------- HOVER cellules image ---------- */
+.art-grid .cell{cursor:zoom-in;}
+.art-grid .cell::after{
+  content:'';
+  position:absolute;inset:0;z-index:2;
+  background:rgba(20,20,22,.35)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='36' height='36'%3E%3Cpath fill='%23FEF9F5' d='M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14m.5-7H9v2H7v1h2v2h1v-2h2V9h-2z'/%3E%3C/svg%3E")
+    center / 36px no-repeat;
+  opacity:0;transition:opacity .3s var(--ease);
+  border-radius:4px;
+}
+.art-grid .cell:hover::after{opacity:1;}
+
+/* ---------- LIGHTBOX ---------- */
+.lightbox{
+  position:fixed;inset:0;z-index:10000;
+  background:rgba(20,20,22,.95);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;
+  transition:opacity .35s var(--ease);
+}
+.lightbox.open{opacity:1;pointer-events:auto;}
+.lightbox img{
+  max-width:90vw;max-height:90vh;
+  object-fit:contain;border-radius:6px;
+  transform:scale(.92);
+  transition:transform .35s var(--ease);
+}
+.lightbox.open img{transform:scale(1);}
+.lightbox-close{
+  position:absolute;top:1.5rem;right:1.5rem;
+  background:none;border:none;cursor:pointer;
+  color:var(--clair);opacity:.7;
+  transition:opacity .2s,transform .2s;
+  padding:.4rem;
+}
+.lightbox-close:hover{opacity:1;transform:scale(1.1);}
+.lightbox-close svg{width:28px;height:28px;fill:currentColor;display:block;}
 
 /* ---------- reveal au scroll ---------- */
 .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease);}
